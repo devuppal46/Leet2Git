@@ -37,6 +37,12 @@
       "matches": ["https://leetcode.com/*"],
       "js": ["content.js"]
     }
-  ]
-  
+  ],
+
+  "icons": {
+    "16": "icons/inactive.png",
+    "32": "icons/inactive.png",
+    "48": "icons/inactive.png",
+    "128": "icons/inactive.png"
+  }
 }
