@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Leet2Git",
+  "version": "0.1.0",
+  "description": "Manually push your accepted LeetCode solutions to GitHub with a single click.",
+
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "storage"
+  ],
+
+  "host_permissions": [
+    "https://leetcode.com/*",
+    "https://api.github.com/*",
+    "https://github.com/*"
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Leet2Git – Push LeetCode to GitHub",
+    "default_icon": {
+      "16": "icons/inactive.png",
+      "32": "icons/inactive.png",
+      "48": "icons/inactive.png",
+      "128": "icons/inactive.png"
+    }
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+  
+}
