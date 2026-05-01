@@ -12,7 +12,7 @@
   ],
 
   "host_permissions": [
-    "https://leetcode.com/*",
+    "https://leetcode.com/problems/*",
     "https://api.github.com/*",
     "https://github.com/*"
   ],
