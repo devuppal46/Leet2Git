@@ -118,7 +118,7 @@ class GitHubAuth {
       const response = await fetch("https://api.github.com/user", {
         headers: {
           "Authorization": `Bearer ${token}`,
-          "User-Agent": "dotpush-Extension"
+          "User-Agent": "Leet2Git-Extension"
         }
       });
 
@@ -163,7 +163,7 @@ class GitHubAuth {
       const response = await fetch("https://api.github.com/user", {
         headers: {
           "Authorization": `Bearer ${token}`,
-          "User-Agent": "dotpush-Extension"
+          "User-Agent": "Leet2Git-Extension"
         }
       });
       return response.ok;

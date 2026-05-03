@@ -36,7 +36,7 @@ class BackgroundAuth {
           const userResponse = await fetch("https://api.github.com/user", {
             headers: {
               "Authorization": `Bearer ${data.access_token}`,
-              "User-Agent": "dotpush-Extension"
+              "User-Agent": "Leet2Git-Extension"
             }
           });
           
@@ -95,7 +95,7 @@ class BackgroundAuth {
   }
 
   async createLeetCodeRepository(token, username) {
-    const repoName = "leet2git";
+    const repoName = "leet-sync";
     const repoUrl = `https://api.github.com/repos/${username}/${repoName}`;
     
     try {
@@ -103,7 +103,7 @@ class BackgroundAuth {
       const checkResponse = await fetch(repoUrl, {
         headers: {
           Authorization: `Bearer ${token}`,
-          "User-Agent": "dotpush-Extension"
+          "User-Agent": "Leet2Git-Extension"
         }
       });
       
@@ -118,7 +118,7 @@ class BackgroundAuth {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
-            "User-Agent": "dotpush-Extension"
+            "User-Agent": "Leet2Git-Extension"
           },
           body: JSON.stringify({
             name: repoName,

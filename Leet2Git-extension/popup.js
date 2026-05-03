@@ -416,7 +416,7 @@ async function ensureRepositoryExists(token, username, repoName) {
         },
         body: JSON.stringify({
           name: repoName,
-          description: "LeetCode solutions automatically synced from Leet2Git extension - https://Leet2Git.in/",
+          description: "LeetCode submissions automatically synced from Leet2Git extension",
           private: false,
           auto_init: true
         })
@@ -451,7 +451,7 @@ async function pushToGitHub(code, url, language = 'python') {
     const fileExtension = getFileExtension(language);
     const fileName = `${slug}.${fileExtension}`;
     const path = `leetcode/${fileName}`;
-    const repoName = "code-sync";
+    const repoName = "leet-sync";
     const username = auth.github_username;
     
     // Store the direct file URL for the repo button
